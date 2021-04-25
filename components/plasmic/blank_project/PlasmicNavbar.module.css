@@ -1,0 +1,38 @@
+.root {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  height: 91px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  background: #2354bd;
+}
+.logo {
+  position: relative;
+  height: auto;
+  font-size: 27px;
+  color: #00f5ff /* plasmic-token: kCQ5hK3TL */;
+  font-weight: 800;
+  font-style: italic;
+}
+@media (max-width: 511px) {
+  .logo {
+    font-size: 21px;
+  }
+}
+.menu:global(.__wab_instance) {
+  position: relative;
+}
+.button {
+  position: relative;
+  color: #ffffff;
+  box-shadow: 2px 4px 20px -5px #0000002e;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #2354bd 0%, #00f5ff 100%);
+  border-width: 0px;
+}

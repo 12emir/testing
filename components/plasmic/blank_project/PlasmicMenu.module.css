@@ -1,0 +1,29 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  position: relative;
+}
+.linkItem__nw0G:global(.__wab_instance) {
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.linkItem__e5HN:global(.__wab_instance) {
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.linkItem__uVaZe:global(.__wab_instance) {
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.linkItem__hUDbK:global(.__wab_instance) {
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+}
