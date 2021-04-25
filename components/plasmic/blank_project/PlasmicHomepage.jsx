@@ -15,7 +15,7 @@ import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
-  ensureGlobalVariants
+  ensureGlobalVariants,
 } from "@plasmicapp/react-web";
 import Navbar from "../../Navbar"; // plasmic-import: Ydq7E6riCm/component
 import { useScreenVariants } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: T92plFGSpkZH/globalVariant
@@ -31,7 +31,7 @@ export const PlasmicHomepage__ArgProps = new Array("children");
 function PlasmicHomepage__RenderFunc(props) {
   const { variants, args, overrides, forNode } = props;
   const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariants()
+    screen: useScreenVariants(),
   });
 
   return (
@@ -118,7 +118,10 @@ function PlasmicHomepage__RenderFunc(props) {
                 defaultContents={"Happy days!!!"}
                 value={args.children}
                 className={classNames(sty.slotChildren)}
-              />
+                children={<div>lol</div>}
+              >
+                LOL
+              </p.PlasmicSlot>
             </div>
           </div>
         </div>
@@ -132,7 +135,7 @@ const PlasmicDescendants = {
   navbar: ["navbar"],
   passwordInput: ["passwordInput"],
   columns: ["columns", "img"],
-  img: ["img"]
+  img: ["img"],
 };
 
 function makeNodeComponent(nodeName) {
@@ -141,14 +144,14 @@ function makeNodeComponent(nodeName) {
       name: nodeName,
       descendantNames: [...PlasmicDescendants[nodeName]],
       internalArgPropNames: PlasmicHomepage__ArgProps,
-      internalVariantPropNames: PlasmicHomepage__VariantProps
+      internalVariantPropNames: PlasmicHomepage__VariantProps,
     });
 
     return PlasmicHomepage__RenderFunc({
       variants,
       args,
       overrides,
-      forNode: nodeName
+      forNode: nodeName,
     });
   };
   if (nodeName === "root") {
@@ -170,7 +173,7 @@ export const PlasmicHomepage = Object.assign(
     img: makeNodeComponent("img"),
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
-    internalArgProps: PlasmicHomepage__ArgProps
+    internalArgProps: PlasmicHomepage__ArgProps,
   }
 );
 
