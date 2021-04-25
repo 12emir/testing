@@ -23,7 +23,11 @@
     {
       "name": "primary",
       "type": "color",
+<<<<<<< HEAD
       "value": "#02FF00",
+=======
+      "value": "#FF8900",
+>>>>>>> 7c7f5bc129ab12cca246983672115d30a03324bd
       "category": "color",
       "meta": {
         "projectId": "qz82g6YFD3ByaFAf5Je7H9",

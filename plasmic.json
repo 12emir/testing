@@ -97,6 +97,12 @@
         "name": "Screen",
         "projectId": "qz82g6YFD3ByaFAf5Je7H9",
         "contextFilePath": "plasmic/blank_project/PlasmicGlobalVariant__Screen.jsx"
+      },
+      {
+        "id": "uaiHSTLBvk",
+        "name": "UnnamedGlobalGroupOfVariants",
+        "projectId": "qz82g6YFD3ByaFAf5Je7H9",
+        "contextFilePath": "plasmic/blank_project/PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants.jsx"
       }
     ]
   },

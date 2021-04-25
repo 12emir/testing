@@ -26,7 +26,7 @@ import * as sty from "./PlasmicHomepage.module.css"; // plasmic-import: 2tywXRtf
 
 export const PlasmicHomepage__VariantProps = new Array();
 
-export const PlasmicHomepage__ArgProps = new Array();
+export const PlasmicHomepage__ArgProps = new Array("children");
 
 function PlasmicHomepage__RenderFunc(props) {
   const { variants, args, overrides, forNode } = props;
@@ -113,14 +113,12 @@ function PlasmicHomepage__RenderFunc(props) {
           </p.Stack>
 
           <div className={classNames(defaultcss.all, sty.box__asmu4)}>
-            <div
-              className={classNames(
-                defaultcss.all,
-                defaultcss.__wab_text,
-                sty.box__ql0FP
-              )}
-            >
-              {"Happy days!"}
+            <div className={classNames(defaultcss.all, sty.box__ql0FP)}>
+              <p.PlasmicSlot
+                defaultContents={"Happy days!!!"}
+                value={args.children}
+                className={classNames(sty.slotChildren)}
+              />
             </div>
           </div>
         </div>
