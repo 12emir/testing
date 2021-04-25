@@ -10,14 +10,16 @@
 // Component: 2tywXRtfaTRf
 import * as React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import * as p from "@plasmicapp/react-web";
 import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
-  ensureGlobalVariants,
+  ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Navbar from "../../Navbar"; // plasmic-import: Ydq7E6riCm/component
+import Tekst from "../../Tekst"; // plasmic-import: 5ZZWxsx_rh/component
 import { useScreenVariants } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: T92plFGSpkZH/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import * as defaultcss from "../plasmic__default_style.module.css"; // plasmic-import: global/defaultcss
@@ -26,12 +28,12 @@ import * as sty from "./PlasmicHomepage.module.css"; // plasmic-import: 2tywXRtf
 
 export const PlasmicHomepage__VariantProps = new Array();
 
-export const PlasmicHomepage__ArgProps = new Array("children");
+export const PlasmicHomepage__ArgProps = new Array("children", "tekst");
 
 function PlasmicHomepage__RenderFunc(props) {
   const { variants, args, overrides, forNode } = props;
   const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariants(),
+    screen: useScreenVariants()
   });
 
   return (
@@ -109,6 +111,44 @@ function PlasmicHomepage__RenderFunc(props) {
               >
                 {"Happy days!"}
               </div>
+
+              <Tekst
+                data-plasmic-name={"tekst"}
+                data-plasmic-override={overrides.tekst}
+                className={classNames("__wab_instance", sty.tekst)}
+              >
+                {"Enter some text"}
+              </Tekst>
+
+              <p.PlasmicLink
+                data-plasmic-name={"link"}
+                data-plasmic-override={overrides.link}
+                className={classNames(defaultcss.all, sty.link)}
+                component={Link}
+                href={"/"}
+                platform={"nextjs"}
+              >
+                <div
+                  className={classNames(
+                    defaultcss.all,
+                    defaultcss.__wab_text,
+                    sty.box__sYrfX
+                  )}
+                >
+                  {"Some link text"}
+                </div>
+
+                <button
+                  data-plasmic-name={"button"}
+                  data-plasmic-override={overrides.button}
+                  className={classNames(defaultcss.button, sty.button)}
+                >
+                  <p.PlasmicSlot
+                    defaultContents={"Click Me"}
+                    value={args.tekst}
+                  />
+                </button>
+              </p.PlasmicLink>
             </div>
           </p.Stack>
 
@@ -118,10 +158,7 @@ function PlasmicHomepage__RenderFunc(props) {
                 defaultContents={"Happy days!!!"}
                 value={args.children}
                 className={classNames(sty.slotChildren)}
-                children={<div>lol</div>}
-              >
-                LOL
-              </p.PlasmicSlot>
+              />
             </div>
           </div>
         </div>
@@ -131,11 +168,24 @@ function PlasmicHomepage__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "navbar", "passwordInput", "columns", "img"],
+  root: [
+    "root",
+    "navbar",
+    "passwordInput",
+    "columns",
+    "img",
+    "tekst",
+    "link",
+    "button"
+  ],
+
   navbar: ["navbar"],
   passwordInput: ["passwordInput"],
-  columns: ["columns", "img"],
+  columns: ["columns", "img", "tekst", "link", "button"],
   img: ["img"],
+  tekst: ["tekst"],
+  link: ["link", "button"],
+  button: ["button"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -144,14 +194,14 @@ function makeNodeComponent(nodeName) {
       name: nodeName,
       descendantNames: [...PlasmicDescendants[nodeName]],
       internalArgPropNames: PlasmicHomepage__ArgProps,
-      internalVariantPropNames: PlasmicHomepage__VariantProps,
+      internalVariantPropNames: PlasmicHomepage__VariantProps
     });
 
     return PlasmicHomepage__RenderFunc({
       variants,
       args,
       overrides,
-      forNode: nodeName,
+      forNode: nodeName
     });
   };
   if (nodeName === "root") {
@@ -171,9 +221,12 @@ export const PlasmicHomepage = Object.assign(
     passwordInput: makeNodeComponent("passwordInput"),
     columns: makeNodeComponent("columns"),
     img: makeNodeComponent("img"),
+    tekst: makeNodeComponent("tekst"),
+    link: makeNodeComponent("link"),
+    button: makeNodeComponent("button"),
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
-    internalArgProps: PlasmicHomepage__ArgProps,
+    internalArgProps: PlasmicHomepage__ArgProps
   }
 );
 

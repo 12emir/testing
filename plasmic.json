@@ -77,6 +77,19 @@
           "cssFilePath": "plasmic/blank_project/PlasmicNavbar.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "5ZZWxsx_rh",
+          "name": "Tekst",
+          "type": "managed",
+          "projectId": "qz82g6YFD3ByaFAf5Je7H9",
+          "renderModuleFilePath": "plasmic/blank_project/PlasmicTekst.jsx",
+          "importSpec": {
+            "modulePath": "Tekst.jsx"
+          },
+          "cssFilePath": "plasmic/blank_project/PlasmicTekst.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [],

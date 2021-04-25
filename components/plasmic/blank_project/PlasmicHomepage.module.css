@@ -173,6 +173,22 @@
     font-size: 34px;
   }
 }
+.tekst:global(.__wab_instance) {
+  position: relative;
+}
+.link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.box__sYrfX {
+  position: relative;
+}
+.button {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
 .box__asmu4 {
   display: block;
   position: relative;
@@ -208,7 +224,7 @@
 .slotChildren {
   font-size: 58px;
   font-weight: 900;
-  color: #ff8900;
+  color: #ff8900 /* plasmic-token: kCQ5hK3TL */;
 }
 @media (max-width: 511px) {
   .slotChildren {
