@@ -2,7 +2,7 @@
 // This file is owned by you, feel free to edit as you see fit.
 import * as React from "react";
 import { PlasmicNavbar } from "./plasmic/blank_project/PlasmicNavbar";
-
+import { motion } from "framer-motion";
 function Navbar(props) {
   // Use PlasmicNavbar to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
@@ -18,7 +18,11 @@ function Navbar(props) {
   //
   // By default, we are just piping all NavbarProps here, but feel free
   // to do whatever works for you.
-  return <PlasmicNavbar {...props} />;
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <PlasmicNavbar {...props} />
+    </motion.div>
+  );
 }
 
 export default Navbar;
