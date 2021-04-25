@@ -14,7 +14,7 @@
   position: relative;
   height: auto;
   font-size: 27px;
-  color: #00f5ff /* plasmic-token: kCQ5hK3TL */;
+  color: #ff8900 /* plasmic-token: kCQ5hK3TL */;
   font-weight: 800;
   font-style: italic;
 }
@@ -33,6 +33,6 @@
   font-weight: 600;
   border-radius: 20px;
   padding: 10px 20px;
-  background: linear-gradient(135deg, #2354bd 0%, #00f5ff 100%);
+  background: linear-gradient(135deg, #2354bd 0%, #ff8900 100%);
   border-width: 0px;
 }
